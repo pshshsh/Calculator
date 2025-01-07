@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class App {
   public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in); //입력 받은 수 저장하는 변수
     Calculator2 calculator = new Calculator2(); //Calculator2 클래스의 객체 생성 및 객체를 calculator 변수에 저장
 
     while (true) {
@@ -33,12 +33,12 @@ public class App {
       }
 
       // 사칙연산 입력
-      char ch = ' ';
+      char operator = ' ';
       while (true) {
         System.out.println("사칙연산 기호를 입력하세요 (+, -, *, /): ");
-        ch = sc.next().charAt(0);
+        operator = sc.next().charAt(0);
         // 나눗셈에서 두 번째 숫자가 0일 경우
-        if (ch == '/' && num2 == 0) {
+        if (operator == '/' && num2 == 0) {
           System.out.println("나눗셈 연산에서 분모는 0이 될 수 없습니다.");
           System.out.println("두 번째 숫자를 다시 입력하세요:");
           while (true) {
@@ -53,7 +53,7 @@ public class App {
         }
 
         // 잘못된 연산 기호 입력 시 처리
-        if (ch != '+' && ch != '-' && ch != '*' && ch != '/') {
+        if (operator != '+' && operator != '-' && operator != '*' && operator != '/') {
           System.out.println("+, -, *, / 중에 입력해주세요.");
           continue; // 연산 기호 입력으로 돌아감
         }
@@ -62,10 +62,10 @@ public class App {
       }
 
       // 계산
-      int result = calculator.calculate(num1, num2, ch);// calculator객체의 calculate 메서드 호출하고 return값을 result에 저장
+      int result = calculator.calculate(num1, num2, operator);// calculator객체의 calculate 메서드 호출하고 return값을 result에 저장
       System.out.println("계산 결과: " + result); // 계산 결과 표시
       // 결과
-      System.out.println("현재까지 저장된 계산된 값: " + calculator.getResults());
+      System.out.println("현재까지 저장된 계산된 값: " + calculator.getResults()); //getResults메서드를 통해 현재 저장된 값 받아옴
       // 삭제
       System.out.println("첫번째 값 삭제 하시겠습니까? yes 누르면 삭제");
       String delete = sc.next();
