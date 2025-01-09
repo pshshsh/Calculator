@@ -6,25 +6,25 @@ public class OperatorType {
       @Override
       public double calculate(double a, double b){
         return a + b;
-      }
+      } //열거형 상수 ADD에 덧셈 계산로직 추가
     },
     MINUS("-"){
       @Override
       public double calculate(double a, double b){
         return a - b;
-      }
+      } //열거형 상수 MINUS에 뺄셈 계산로직 추가
     },
     MULTIPLE("*"){
       @Override
       public double calculate(double a, double b){
         return a * b;
-      }
+      } //열거형 상수 MULTIPLE에 곱셈 계산로직 추가
     },
     DIVIDE("/"){
       @Override
       public double calculate(double a, double b){
         return a / b;
-      }
+      } // 열거형 상수 DIVIDE에 나눗셈 계산 로직 추가
     };
 
     private final String operator; //사칙연산을 담을 필드를 추가해줘야됨
