@@ -1,3 +1,4 @@
+//계산기 레벨 3 : 열거형까지만 구현
 package com.example.calculator3;
 
 import java.util.Scanner;
@@ -61,7 +62,7 @@ public class App {
             break;
           default:
             System.out.println("+, -, *, / 중에 입력해주세요.");
-            continue; // 잘못된 연산 기호 입력 시 반복
+            continue; // 잘못된 연산 기호 입력 시 다시 반복
         }
         break; // 올바른 연산 기호 입력 시 반복 종료
       }
