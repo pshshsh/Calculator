@@ -12,7 +12,7 @@ public class Calculator2 {
     // 사칙 연산 입력된거에 맞게 계산
     switch (operator) {
       case '+':
-        result = num1 + num2;
+        result = num1 + num2; //지역변수
         break;
 
       case '-':
